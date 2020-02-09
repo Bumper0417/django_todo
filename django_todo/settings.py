@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,8 @@ SECRET_KEY = '*1!*^aqnl_^08dqii6uxlxznp2r%cg)^7no8l%!st$872fk)@#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-e433ec26-3ff8-467e-8b01-4dd8723351da.ws-eu01.gitpod.io']
+ALLOWED_HOSTS = ['localhost']
+
 
 
 # Application definition
@@ -74,12 +76,14 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-}
+}"""
+
+DATABASES = {"default": dj_database_url.parse("postgres://kabgudetqozyde:06c6ff3f212e1854ef58dea1017f10571ffb6502cf1fdd62b9da7d23fdc53eb9@ec2-46-137-177-160.eu-west-1.compute.amazonaws.com:5432/dtr0tluco7rbp")}
 
 
 # Password validation
