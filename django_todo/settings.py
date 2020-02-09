@@ -26,7 +26,7 @@ SECRET_KEY = '*1!*^aqnl_^08dqii6uxlxznp2r%cg)^7no8l%!st$872fk)@#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', 'christos-django-todo.herokuapp.com']
 
 
 
